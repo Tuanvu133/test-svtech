@@ -1,0 +1,55 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Install required packages
+      apt:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - software-properties-common
+        - python3-pip
+        - python3-setuptools
+        - python3-apt
+
+    - name: Add sysadmin accounts
+      user:
+        name: sysadmin1
+        groups: sudo
+        append: yes
+
+    - name: Set hostname
+      hostname:
+        name: production-server
+
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+
+    - name: Specify Docker logging and storage driver
+      copy:
+        content: |
+          {
+            "log-driver": "json-file",
+            "storage-driver": "overlay2"
+          }
+        dest: /etc/docker/daemon.json
+
+    - name: Prepare/tune for high network traffic workload
+      sysctl:
+        name: "{{ item.name }}"
+        value: "{{ item.value }}"
+      loop:
+        - { name: "net.core.somaxconn", value: "65535" }
+        - { name: "net.ipv4.ip_forward", value: "1" }
+
+    - name: Enable user command logging
+      lineinfile:
+        path: /etc/bash.bashrc
+        line: 'export PROMPT_COMMAND="RETRN_VAL=$?;logger -p local6.debug \"$(whoami) [$$]: $(history 1 | sed \"s/^[ ]*[0-9]\+[ ]*//\" ) [$RETRN_VAL]\""'
+
+    - name: Restart Docker service
+      systemd:
+        name: docker
+        state: restarted
