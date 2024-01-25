@@ -44,7 +44,7 @@ Sử dụng Ansible hostname module để đặt hostname của máy chủ thàn
 4. **Install Docker**
 Sử dụng Ansible apt module để cài đặt Docker.
 
-    - name: Install required system packages
+     - name: Install required system packages
       apt:
         pkg:
           - apt-transport-https
