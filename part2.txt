@@ -1,0 +1,9 @@
+Giám sát việc sử dụng tài nguyên:
+
+- Xác định các số liệu chính: Xác định các tài nguyên quan trọng cần giám sát, chẳng hạn như mức sử dụng CPU, mức tiêu thụ bộ nhớ, I/O ổ đĩa, lưu lượng mạng và thời gian phản hồi.
+- Chọn Công cụ giám sát: Các công cụ phổ biến bao gồm Prometheus, Grafana, Datadog, New Relic và các công cụ khác. Đảm bảo khả năng tương thích với các công nghệ và dịch vụ đang sử dụng.
+- Tổng hợp nhật ký: Triển khai các công cụ tổng hợp nhật ký (ví dụ: ELK Stack, Graylog) để tập trung nhật ký từ các thành phần khác nhau. Phân tích nhật ký để tìm thông báo lỗi, cảnh báo hoặc các mẫu bất thường có thể chỉ ra vấn đề về tài nguyên.
+- Cảnh báo và thông báo: Thiết lập quy tắc cảnh báo dựa trên ngưỡng được xác định trước cho số liệu sử dụng tài nguyên. Sử dụng hệ thống cảnh báo (ví dụ: Prometheus Alertmanager, Grafana) để thông báo cho nhóm vận hành hoặc kỹ sư DevOps trong trường hợp có điều bất thường.
+- Bảng điều khiển và trực quan hóa: Tạo trang tổng quan bằng các công cụ trực quan hóa (ví dụ: Grafana, Kibana) để cung cấp cái nhìn tổng quan theo thời gian thực về việc sử dụng tài nguyên. Tùy chỉnh trang tổng quan để hiển thị các số liệu quan trọng cho các bên liên quan khác nhau.
+
+

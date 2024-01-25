@@ -1,0 +1,19 @@
+Khi nhận được cảnh báo rằng một dịch vụ không hoạt động hoặc chậm, bạn sẽ làm gì để kiểm tra dịch vụ đó và giải quyết vấn đề?
+
+- Kiểm tra trạng thái hiện tại của dịch vụ để xác định xem nó đang hoạt động hay không. 
+- Kiểm tra các logs hệ thống để tìm hiểu có thông báo lỗi hoặc cảnh báo liên quan đến dịch vụ đó không.
+- Sử dụng hệ thống giám sát (monitoring) để theo dõi các chỉ số và thông số liên quan đến dịch vụ. Điều này giúp phát hiện vấn đề sớm và xác định nguyên nhân.
+- Kiểm tra tình trạng sử dụng tài nguyên (CPU, bộ nhớ, ổ đĩa) của server hoặc container chạy dịch vụ để xem xét liệu có tình trạng quá tải hay không.
+- Kiểm tra kết nối mạng. Sử dụng lệnh như ping, telnet, hoặc curl để kiểm tra tình trạng mạng.
+- Khởi động lại dịch vụ để xem liệu vấn đề có giải quyết được tạm thời hay không. Sử dụng lệnh systemctl restart hoặc tương tự.
+
+
+
+
+Các bước để ngăn chặn sự cố xuất hiện trong tương lai:
+- Tiến hành phân tích kỹ lưỡng sau sự cố để xác định nguyên nhân gốc rễ của vấn đề.
+- Ghi lại sự cố, bao gồm các bước khắc phục sự cố đã thực hiện, các phát hiện và giải pháp.
+- Tăng cường các quy trình kiểm tra tự động để phát hiện các vấn đề tiềm ẩn trong giai đoạn phát triển và triển khai.
+- Tăng cường giám sát hiệu suất bằng cách thêm số liệu bổ sung, cải thiện ngưỡng cảnh báo và triển khai phát hiện bất thường.
+- Thúc đẩy văn hóa CI (Continuous Improvement), khuyến khích các nhóm chia sẻ hiểu biết sâu sắc, tiến hành cải tiến thường xuyên và thực hiện các bài học từ các sự cố.
+
