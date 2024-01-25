@@ -1,4 +1,4 @@
-![image](https://github.com/Tuanvu133/test-svtech/assets/95236990/63b9006f-02dc-41c7-b0e1-158e86b40c13)# test-svtech
+# test-svtech
 01 - Build a script to install base servers for a production environment, and use any automation tools that suit you (ansible*, salt stack, terraform, bash...). The solution should set up the following components, and make any changes as you see fit so that we can assess your consideration for a production-grade system.
 "Sysadmin" accounts with sudo privilege; hostname (dns); cli commands you use often.
 Install docker daemon, specify logging driver + storage driver of your choice.
