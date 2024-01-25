@@ -20,7 +20,7 @@
 
     - name: Set hostname
       hostname:
-        name: production-server
+        name: base-server
 
     - name: Install Docker
       apt:
