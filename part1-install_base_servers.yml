@@ -22,6 +22,7 @@
       hostname:
         name: base-server
 
+# Cai dat Docker
     - name: Install required system packages
       apt:
         pkg:
